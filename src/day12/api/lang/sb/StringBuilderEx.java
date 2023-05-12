@@ -1,0 +1,82 @@
+package day12.api.lang.sb;
+
+public class StringBuilderEx {
+	public static void main(String[] args) {
+		
+		
+		//StringBuilder => 단일 쓰레드 환경에서(main이 하나있때)
+		//StringBuffer => 멀티 쓰레드 환경에서
+	
+	
+		String str = new String("Java ");
+		StringBuilder sb = new StringBuilder("Java ");
+		
+		//차이점
+		str = str + "program";
+		sb.append("program");
+		
+		System.out.println(str);
+		System.out.println(sb);
+
+		//빌더의 메서드
+		//append() - 문자열 끝에 추가
+		sb.append("ming");
+		System.out.println(sb);
+		
+		//insert() - 중간에 추가
+		sb.insert(5, "study");
+		System.out.println(sb);
+	
+		//replace() - 문자열 변경
+		sb.replace(5, 10, "book "); //(이상, 미만)
+		System.out.println(sb);
+		
+		//delete() - 삭제
+		sb.delete(5, 10); //(이상, 미만)
+		System.out.println(sb);
+		
+		sb.deleteCharAt(0); // 인덱스번째 삭제
+		System.out.println(sb);
+		
+		//reverse() - 거꾸로 뒤집기
+		sb.reverse();
+		System.out.println(sb);
+		
+		//toString() - 문자열로 형변환
+		if("gnimmargorp ava".equals(sb)) { // 타입이 달라서 확인할 수가 없음 이에, toString를 사용
+			System.out.println("같음");
+		}else {
+			System.out.println("다름"); 
+		}
+		
+		String result = sb.toString();
+		System.out.println(result);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	
+	}
+	
+
+}
